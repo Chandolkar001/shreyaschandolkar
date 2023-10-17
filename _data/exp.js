@@ -2,7 +2,7 @@ const exp = [
     {
         name: 'Mirror Score',
         years: 'Oct 2022 - Mar 2023',
-        position: 'Intern',
+        position: 'Backend Intern',
         type: 'Internship',
         place: 'New Delhi, IN(Remote)',
         href: 'https://www.mirrorscore.com/',
@@ -16,7 +16,7 @@ const exp = [
     {
         name: 'Zapient Digital',
         years: 'Oct 2022 - Dec 2023',
-        position: 'Intern',
+        position: 'Python Intern',
         type: 'Internship',
         place: 'Pune, IN',
         href: 'https://www.zapientdigital.com/',

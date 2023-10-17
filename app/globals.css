@@ -165,3 +165,37 @@ form button {
     absolute bottom-0 right-0 
     rounded-tl-md;
 }
+
+/* exp css */
+
+.job-card {
+  @apply max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-8;
+}
+
+.job-info {
+  @apply px-6 py-4;
+}
+
+.job-years {
+  @apply text-gray-700 text-right mb-2;
+}
+
+.job-title {
+  @apply text-gray-700 text-base mb-2;
+  @apply font-bold text-xl text-left mb-2;
+}
+
+.company-name,
+.job-place {
+  @apply text-gray-700 text-base mb-2;
+  @apply text-left;
+}
+
+.job-description {
+  @apply text-gray-700 text-base;
+  @apply list-none p-0 m-0;
+}
+
+.job-description li {
+  @apply mb-2;
+}
