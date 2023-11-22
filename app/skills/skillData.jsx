@@ -1,33 +1,19 @@
-import skills from "@/_data/skill"
 
-export default function SkillDat() {
+export default function SkillDat({title, items}) {
   return (
-    <>
-    <div>
-      {skills.frameworks.map(item =>(
-        <p>{item.name}</p>
-      ))}
+    <div className="professional-card">
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">{title}</h5>
+          <ul className="list-group list-group-flush">
+          {items.map((item, index) => (
+              <li className="list-group-item" key={index}>
+                {item.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
-    <div>
-      {skills.languages.map(item =>(
-        <p>{item.name}</p>
-      ))}
-    </div>
-    <div>
-      {skills.tools.map(item =>(
-        <p>{item.name}</p>
-      ))}
-    </div>
-    <div>
-      {skills.misc.map(item =>(
-        <p>{item.name}</p>
-      ))}
-    </div>
-    <div>
-      {skills.computing_environments.map(item =>(
-        <p>{item.name}</p>
-      ))}
-    </div>
-    </>
-  )
+  );
 }
