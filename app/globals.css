@@ -42,19 +42,71 @@ nav {
   @apply
     pb-4
     border-b-2 border-gray-100
-    flex items-center gap-5 
+    flex items-center justify-center 
     my-10 mx-auto 
     max-w-5xl;
 }
 nav a, nav span {
-  @apply text-gray-100;
+  @apply 
+    text-gray-100
+    mx-10;
 }
 nav a:hover {
   color: #00ff00;
 }
-main nav {
-  @apply border-0;
+
+.menu-links {
+  @apply
+    flex items-center justify-center;
 }
+
+/* Hamburger menu styles */
+#menu-toggle {
+  @apply
+    block
+    text-gray-100
+    cursor-pointer;
+  display: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  nav {
+    @apply flex-col items-start gap-4;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  nav a {
+    @apply block;
+  }
+
+  nav a:not(:first-child) {
+    @apply mt-2;
+  }
+
+  nav {
+    @apply border-0;
+  }
+
+  nav.active {
+    @apply border-b-2 border-gray-100;
+  }
+
+  .menu-links {
+    @apply hidden md:flex flex-col items-start gap-4;
+  }
+  
+  .menu-links.open {
+    @apply flex;
+  }
+}
+
+/* main nav {
+  @apply border-0;
+} */
 
 /* button styles */
 button {
@@ -181,6 +233,22 @@ form button {
   @apply 
     absolute bottom-0 right-0 
     rounded-tl-md;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    @apply 
+      flex-col
+      items-start 
+      py-2 px-2;
+  }
+
+  .card,
+  .git-card {
+    @apply 
+      w-full 
+      max-w-md;
+  }
 }
 
 /* exp css */
