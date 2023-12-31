@@ -11,10 +11,9 @@
   export default function RootLayout({ children }) {
     return (
       <html lang="en">
-        <body>
+        <body className='main-div text-cyberpunk-pink bg-cyberpunk-bg border-cyberpunk-border p-5 mx-auto my-auto'>
         <Navbar/>
         {children}
-
         </body>
       </html>
     )

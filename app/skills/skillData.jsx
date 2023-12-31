@@ -40,7 +40,7 @@ export default function SkillDat({title, items}) {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          align-items: flex-start;
+          align-items: centre;
           margin-top: 0px
           height: 100%; /* Ensure the card body takes full height */
         }
@@ -48,6 +48,7 @@ export default function SkillDat({title, items}) {
         .list-group-item {
           /* Additional styles for list items if needed */
         }
+        
       `}</style>
     </div>
   );

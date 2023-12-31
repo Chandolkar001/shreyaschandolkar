@@ -1,7 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  .text-cyberpunk-pink {
+    color: #fc1cb5; /* Replace with your preferred cyberpunk color */
+  }
 
+  .text-green {
+    color: #00ff00;
+  }
+
+  .bg-cyberpunk-bg {
+    background-color: #0f0f23; /* Replace with your preferred cyberpunk background color */
+  }
+
+  .border-cyberpunk-border {
+    border-color: #fc1cb5; /* Replace with your preferred cyberpunk border color */
+  }
+}
 
 /* base styles */
 body {
@@ -20,20 +36,21 @@ p > a {
   @apply text-primary underline;
 }
 
+/* main styles */
 /* nav styles */
 nav {
   @apply
     pb-4
-    border-b-2 border-gray-200
+    border-b-2 border-gray-100
     flex items-center gap-5 
     my-10 mx-auto 
     max-w-5xl;
 }
 nav a, nav span {
-  @apply text-gray-500;
+  @apply text-gray-100;
 }
 nav a:hover {
-  @apply text-black;
+  color: #00ff00;
 }
 main nav {
   @apply border-0;
@@ -229,4 +246,18 @@ form button {
   padding: 0.25rem 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+/* skills css */
+.card-con {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+  .card-con {
+    flex-direction: column; /* Cards will stack vertically on small screens */
+  }
 }
