@@ -7,7 +7,7 @@ const Social = () => {
     instagram: 'https://instagram.com/shreyasc_01',
     linkedin: 'https://www.linkedin.com/in/shreyaschandolkar/',
     github: 'https://github.com/Chandolkar001',
-    resume: 'https://drive.google.com/file/d/1PfD9G6DsHDhepzaWqSsYBe1tslgX9MKS/view?usp=sharing'
+    resume: 'https://drive.google.com/file/d/1m-lkY-a3qVblVINE4C7kaw92T_Dfh_DT/view?usp=sharing'
   };
 
   const getIconComponent = (platform) => {
