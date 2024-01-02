@@ -190,7 +190,7 @@ form button {
     max-w-5xl;
 
   margin-left: auto;
-  background-color: #d9d9df;
+  background-color: #ffffff;
   margin-right: auto;
   height: 100%;
 }
@@ -265,7 +265,7 @@ form button {
     overflow-hidden 
     mb-8;
 
-  background-color: #d9d9df;
+  background-color: #ffffff;
 }
 
 .job-info {
@@ -280,6 +280,7 @@ form button {
 
 .arrow{
   color: #0f7a0f;
+  margin-top: 5px;
 }
 
 .job-content{
@@ -288,10 +289,36 @@ form button {
     items-center;
 }
 
+.experience-card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card-subtitle {
+  font-weight: bolder; 
+  margin-top: -5px;
+}
+
 @media screen and (max-width: 768px) {
   .job-card{
     padding: auto;
   }
+}
+
+.job-card-date{
+  @apply
+    text-right
+    border
+    border-black 
+    bg-amber-100 
+    text-slate-950 
+    mt-2 
+    px-4 
+    text-sm 
+    py-2 
+    rounded-full 
+    inline-block 
+    mx-4;
 }
 
 /* ProjectCard.css */
@@ -308,7 +335,7 @@ form button {
     max-w-5xl;
 
   margin-left: auto;
-  background-color: #d9d9df;
+  background-color: #ffffff;
   margin-right: auto;
   height: 100%;
 }
@@ -343,8 +370,11 @@ form button {
 }
 
 .proj-tech-stack-item {
-  background-color: #f8f9fa;
+  /* background-color: #f7ffc7; */
+  @apply
+    bg-amber-100;
   color: #343a40;
+  border: #1f3031 solid 1px;
   border-radius: 4px;
   padding: 0.25rem 0.5rem;
   margin-right: 0.5rem;

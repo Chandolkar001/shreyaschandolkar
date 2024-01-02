@@ -26,7 +26,7 @@ const projects = [
             'CSS',
         ],
         desc: [
-            "A online web platform which hosts programming contests with questions on topics like Data Structures and Algorithms and tests the paricipants code against test cases and checks the correctness of the code.",
+            "An online web platform which hosts programming contests with questions on topics like Data Structures and Algorithms and tests the paricipants code against test cases and checks the correctness of the code.",
             "It runs code in a sandboxed environment and limits the system calls of the code and applies time and memory limits to it according to the given constraints.",
         ]
     },

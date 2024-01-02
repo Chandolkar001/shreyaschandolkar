@@ -12,6 +12,8 @@ export default function Experience() {
           location={experience.place}
           duration={experience.years}
           description={experience.desc}
+          type={experience.type}
+          href={experience.href}
         />
       ))}
     </div>

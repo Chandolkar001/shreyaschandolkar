@@ -45,7 +45,7 @@ const exp = [
 
     {
         name: 'PICT IEEE Student Branch',
-        years: 'February 2021 - August 2023',
+        years: 'Feb 2021 - Aug 2023',
         position: 'Tech Head',
         type: 'Volunteer',
         place: 'Pune, IN',
@@ -58,7 +58,7 @@ const exp = [
     },
     {
         name: 'Pune Institute of Computer Technology, Pune',
-        years: 'August 2020 - August 2024',
+        years: 'Aug 2020 - Aug 2024',
         position: 'Engineering',
         type: 'Undergraduate',
         place: 'Pune, IN',
