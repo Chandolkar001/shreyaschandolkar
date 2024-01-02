@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
-  .text-cyberpunk-pink {
-    color: #fc1cb5; /* Replace with your preferred cyberpunk color */
-  }
 
   .text-green {
     color: #00ff00;
@@ -184,7 +181,6 @@ form button {
 
 .card {
   @apply 
-    bg-white 
     shadow-sm 
     rounded-md 
     py-3 px-4 my-4 
@@ -194,45 +190,47 @@ form button {
     max-w-5xl;
 
   margin-left: auto;
+  background-color: #d9d9df;
   margin-right: auto;
+  height: 100%;
 }
 .card h3 {
   @apply 
-    font-bold text-gray-700 text-sm 
+    font-bold text-sm 
     mb-0;
+  
+    color: #343a40
 }
 .card p {
   @apply my-4 text-lg leading-6;
 }
 
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: centre;
+  height: 100%;
+}
+
+.card-body h5{
+  @apply
+    font-bold
+    text-lg;
+}
+
 /* github stats card */
 .git-card {
-  @apply max-w-md mx-auto bg-white shadow-md rounded-md p-6;
+  @apply max-w-md mx-auto bg-gray-200 shadow-md rounded-md p-6;
 }
 
 .git-card img {
   @apply w-full h-auto mb-2;
-}
-/* pill styles */
-.pill {
-  @apply 
-    py-1 px-2 mt-3
-    inline-block 
-    text-xs font-semibold;
-}
-.pill.high {
-  @apply bg-red-300 text-red-600;
-}
-.pill.medium {
-  @apply bg-blue-300 text-blue-600;
-}
-.pill.low {
-  @apply bg-emerald-300 text-emerald-600;
-}
-.card .pill {
-  @apply 
-    absolute bottom-0 right-0 
-    rounded-tl-md;
 }
 
 @media screen and (max-width: 768px) {
@@ -243,71 +241,108 @@ form button {
       py-2 px-2;
   }
 
-  .card,
+  .card:hover {
+    transform: none;
+  }
+
   .git-card {
     @apply 
       w-full 
       max-w-md;
   }
+
+
 }
 
 /* exp css */
 
 .job-card {
-  @apply max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-8;
+  @apply 
+    max-w-4xl 
+    mx-auto 
+    shadow-lg 
+    rounded-lg 
+    overflow-hidden 
+    mb-8;
+
+  background-color: #d9d9df;
 }
 
 .job-info {
   @apply px-6 py-4;
 }
 
-.job-years {
-  @apply text-gray-700 text-right mb-2;
+.job-items{
+  @apply
+    flex
+    space-x-4;
 }
 
-.job-title {
-  @apply text-gray-700 text-base mb-2;
-  @apply font-bold text-xl text-left mb-2;
+.arrow{
+  color: #0f7a0f;
 }
 
-.company-name,
-.job-place {
-  @apply text-gray-700 text-base mb-2;
-  @apply text-left;
+.job-content{
+  @apply
+    flex
+    items-center;
 }
 
-.job-description {
-  @apply text-gray-700 text-base;
-  @apply list-none p-0 m-0;
-}
-
-.job-description li {
-  @apply mb-2;
+@media screen and (max-width: 768px) {
+  .job-card{
+    padding: auto;
+  }
 }
 
 /* ProjectCard.css */
+
+
+.proj-card {
+  @apply 
+    shadow-sm 
+    rounded-md 
+    py-3 px-4 my-4 
+    relative 
+    overflow-hidden
+    text-justify
+    max-w-5xl;
+
+  margin-left: auto;
+  background-color: #d9d9df;
+  margin-right: auto;
+  height: 100%;
+}
+
+
+.proj-card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: centre;
+  height: 100%;
+}
 
 .project-card {
   max-width: 100vh;
   margin: 0 auto;
 }
 
-.tech-stack {
+.proj-tech-stack {
   margin-bottom: 1rem;
 }
 
-.tech-stack-title {
+.proj-tech-stack-title {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.tech-stack-list {
+.proj-tech-stack-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.tech-stack-item {
+.proj-tech-stack-item {
   background-color: #f8f9fa;
   color: #343a40;
   border-radius: 4px;
@@ -321,6 +356,13 @@ form button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+
+.professional-card {
+  margin: 10px;
+  width: 200px; 
+  height: 20vh;
 }
 
 /* Media query for small screens */
