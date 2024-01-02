@@ -224,6 +224,10 @@ form button {
     text-lg;
 }
 
+
+/* animation */
+
+
 /* github stats card */
 .git-card {
   @apply max-w-md mx-auto bg-gray-200 shadow-md rounded-md p-6;
