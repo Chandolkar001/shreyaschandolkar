@@ -17,7 +17,7 @@ export default function ProjectData({title, description, techStack, link}) {
           </a>
             </span>
           </div>
-          <div class="border-b-2 border-blue-500 mb-2 flex-grow"></div>
+          <div className="border-b-2 border-blue-500 mb-2 flex-grow"></div>
           <ul className="list-group mb-6">
           {description.map((point, index) => (
             <li className="job-items" key={index}>

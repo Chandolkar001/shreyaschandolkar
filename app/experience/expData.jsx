@@ -17,7 +17,7 @@ export default function ExpData ({ title, company, location, duration, descripti
         </span>
 
       </div>
-      <div class="border-b-2 mx-4 border-blue-500 mb-2 flex-grow"></div>
+      <div className="border-b-2 mx-4 border-blue-500 mb-2 flex-grow"></div>
 
       <div className="card-body">
         <ul className="list-group">
