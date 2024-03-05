@@ -1,5 +1,17 @@
 const exp = [
     {
+        name: 'Cloudanix Labs Pvt Ltd',
+        years: 'Dec 2023 - Feb 2024',
+        position: 'Software Engineer Intern',
+        type: 'Internship',
+        place: 'Sunnyvale, CA, USA (Remote)',
+        href: 'https://www.cloudanix.com/',
+        desc: [
+            "Developed GitHub, Bitbucket, and GitLab plugins for code secret and code vulnerability scanning.",
+            "Developed automated workflows for Google Cloud Build service."
+        ]
+    },
+    {
         name: 'Mirror Score',
         years: 'Oct 2022 - Mar 2023',
         position: 'Backend Intern',
