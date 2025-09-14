@@ -3,28 +3,41 @@ const skills = {
         {name: 'Python', color: 'red'},
         {name: 'C/C++', color: 'pink'},
         {name: 'Go', color: 'yellow'},
-        {name: 'JavaScript', color: 'green'},
+        {name: 'TypeScript', color: 'green'},
+        {name: 'Bash', color: 'blue'},
+        {name: 'Kotlin', color: 'purple'},
     ],
     Frameworks: [
-        {name: 'Node.js', color: 'teal'},
-        {name: 'Django', color: 'pink'},
-        {name: 'ReactJS', color: 'red'},
-        {name: 'ROS2', color: 'orange'},
+        {name: 'React', color: 'teal'},
+        {name: 'Angular', color: 'pink'},
+        {name: 'ROS', color: 'orange'},
+        {name: 'Node.js', color: 'green'},
+    ],
+    DevOps: [
+        {name: 'Docker', color: 'purple'},
+        {name: 'Kubernetes', color: 'blue'},
+        {name: 'Git', color: 'green'},
+        {name: 'AWS', color: 'yellow'},
+        {name: 'Linux', color: 'brown'},
+    ],
+    Databases: [
+        {name: 'MongoDB', color: 'red'},
+        {name: 'Redis', color: 'pink'},
+        {name: 'Elasticsearch', color: 'yellow'},
+    ],
+    IoT_Robotics: [
+        {name: 'ESP32', color: 'red'},
+        {name: 'Arduino', color: 'pink'},
+        {name: 'Raspberry Pi', color: 'yellow'},
+        {name: 'MQTT', color: 'green'},
+        {name: 'RabbitMQ', color: 'blue'},
     ],
     Tools: [
-        {name: 'Docker', color: 'purple'},
-        {name: 'Git', color: 'blue'},
-        {name: 'Kubernetes', color: 'green'},
-        {name: 'ESP-IDF', color: 'brown'},
-    ],
-    Compute: [
-        {name : 'Raspberry Pi', color: 'red'},
-        {name : 'Linux', color : 'pink'},
-        {name : 'ESP32', color : 'yellow'}
-    ],
-    Misc: [
-        {name: 'AWS', color: 'yellow'},
-        {name: 'Azure', color: 'blue'},    ]
+        {name: 'Dynatrace', color: 'purple'},
+        {name: 'Grafana', color: 'blue'},
+        {name: 'N8N', color: 'green'},
+        {name: 'Relevance AI', color: 'brown'},
+    ]
 };
 
 export default skills;

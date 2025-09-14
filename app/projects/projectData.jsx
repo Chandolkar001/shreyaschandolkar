@@ -9,29 +9,29 @@ export default function ProjectData({title, description, techStack, link}) {
         <div className="proj-card-body">
           <div className='flex justify-between'>
             <span>
-            <h5 className="proj-card-title mb-2  text-neutral-900 text-xl">{title}</h5>
+            <h5 className="proj-card-title mb-2 text-primary-blue text-xl heading-secondary">{title}</h5>
             </span>
             <span>
             <a href={link} target="_blank" rel="noopener noreferrer">
-            <div className='text-black'><FiExternalLink /></div>
+            <div className='text-primary-blue hover:text-dark-blue transition-colors'><FiExternalLink /></div>
           </a>
             </span>
           </div>
-          <div className="border-b-2 border-blue-500 mb-2 flex-grow"></div>
+          <div className="border-b-2 border-medium-blue mb-2 flex-grow"></div>
           <ul className="list-group mb-6">
           {description.map((point, index) => (
             <li className="job-items" key={index}>
               <div className='arrow'><BsArrowRightCircleFill/></div>
-              <div className='job-content'>
+              <div className='job-content text-blue-gray body-text'>
                 {point}
               </div>
             </li>
           ))}
         </ul><div className="proj-tech-stack">
-            <h6 className="proj-tech-stack-title">Tech Stack</h6>
+            <h6 className="proj-tech-stack-title heading-tertiary">Tech Stack</h6>
             <div className="proj-tech-stack-list">
               {techStack.map((tech, index) => (
-                <div className="proj-tech-stack-item" key={index}>{tech}</div>
+                <div className="proj-tech-stack-item ui-text" key={index}>{tech}</div>
               ))}
             </div>
           </div>

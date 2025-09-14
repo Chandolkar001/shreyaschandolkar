@@ -3,7 +3,7 @@ import exp from "@/_data/exp"
 
 export default function Experience() {
   return (
-    <div>
+    <div className="px-4 md:px-6">
       {exp.map((experience, index) => (
         <ExpData
           key={index}

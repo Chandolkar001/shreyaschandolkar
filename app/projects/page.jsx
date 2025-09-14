@@ -3,7 +3,7 @@ import projects from "@/_data/project";
 
 export default function Projects() {
   return (
-    <div>
+    <div className="px-4 md:px-6">
 {projects.map((proj, index) => (
         <ProjectData
           key={index}

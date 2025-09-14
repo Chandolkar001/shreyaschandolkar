@@ -1,24 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer utilities {
 
+@layer utilities {
+  /* Dark/Light Theme Color System */
+  
+  /* Light Theme Colors */
+  .light .text-primary-blue {
+    color: #1e40af; /* blue-800 */
+  }
+  
+  .light .text-medium-blue {
+    color: #3b82f6; /* blue-500 */
+  }
+  
+  .light .text-dark-blue {
+    color: #1e3a8a; /* blue-900 */
+  }
+  
+  .light .text-blue-gray {
+    color: #64748b; /* slate-500 */
+  }
+  
+  .light .bg-light-blue {
+    background-color: #dbeafe; /* blue-100 */
+  }
+  
+  .light .bg-primary-blue {
+    background-color: #1e40af; /* blue-800 */
+  }
+  
+  .light .border-primary-blue {
+    border-color: #1e40af; /* blue-800 */
+  }
+  
+  .light .border-medium-blue {
+    border-color: #3b82f6; /* blue-500 */
+  }
+
+  /* Dark Theme Colors (Default) */
+  .text-primary-blue {
+    color: #60a5fa; /* blue-400 */
+  }
+  
+  .text-medium-blue {
+    color: #93c5fd; /* blue-300 */
+  }
+  
+  .text-dark-blue {
+    color: #dbeafe; /* blue-100 */
+  }
+  
+  .text-blue-gray {
+    color: #cbd5e1; /* slate-300 */
+  }
+  
+  .bg-light-blue {
+    background-color: #1e293b; /* slate-800 */
+  }
+  
+  .bg-primary-blue {
+    background-color: #1e40af; /* blue-800 */
+  }
+  
+  .border-primary-blue {
+    border-color: #60a5fa; /* blue-400 */
+  }
+  
+  .border-medium-blue {
+    border-color: #93c5fd; /* blue-300 */
+  }
+
+  /* Legacy colors - keeping for backward compatibility */
   .text-green {
-    color: #00ff00;
+    color: #60a5fa; /* Changed to blue for dark theme */
   }
 
   .bg-cyberpunk-bg {
-    background-color: #0f0f23; /* Replace with your preferred cyberpunk background color */
+    background-color: #0f172a; /* Dark background */
   }
 
   .border-cyberpunk-border {
-    border-color: #fc1cb5; /* Replace with your preferred cyberpunk border color */
+    border-color: #60a5fa; /* Changed to blue for dark theme */
+  }
+  
+  .light .text-green {
+    color: #3b82f6;
+  }
+
+  .light .bg-cyberpunk-bg {
+    background-color: #f8fafc;
+  }
+
+  .light .border-cyberpunk-border {
+    border-color: #3b82f6;
+  }
+
+  /* Skills modal light mode */
+  .light .skill-tag {
+    color: #1e40af; /* blue-800 - same as light text-primary-blue */
+    background-color: #ffffff;
+    border: 1px solid rgba(30, 64, 175, 0.3); /* blue-800 with 30% opacity */
+  }
+  
+  /* Typography System */
+  .name-title {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 700;
+  }
+  
+  .heading-primary {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 700;
+  }
+  
+  .heading-secondary {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 600;
+  }
+  
+  .heading-tertiary {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 500;
+  }
+  
+  .body-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 400;
+  }
+  
+  .body-medium {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 500;
+  }
+  
+  .ui-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 500;
   }
 }
 
 /* base styles */
 body {
-  @apply text-gray-500;
+  @apply text-slate-300 bg-slate-900;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light body {
+  @apply text-gray-700 bg-white;
 }
 h1, h2 {
   @apply font-bold text-primary text-lg;
@@ -37,67 +169,140 @@ p > a {
 /* nav styles */
 nav {
   @apply
-    pb-4
-    border-b-2 border-gray-100
-    flex items-center justify-center 
+    py-6
+    border-b 
     my-10 mx-auto 
-    max-w-5xl;
+    max-w-5xl
+    w-full
+    border-medium-blue;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
 nav a, nav span {
   @apply 
-    text-gray-100
-    mx-10;
+    ui-text
+    text-blue-gray
+    transition-colors
+    duration-200;
 }
+
+.menu-links a {
+  @apply mr-8;
+}
+
+
 nav a:hover {
-  color: #00ff00;
+  @apply text-primary-blue;
+}
+
+.nav-link {
+  @apply 
+    ui-text
+    text-blue-gray
+    transition-colors
+    duration-200;
+}
+
+.nav-link:hover {
+  @apply text-primary-blue;
 }
 
 .menu-links {
   @apply
-    flex items-center justify-center;
+    flex items-center justify-start;
+}
+
+
+.social-links a {
+  @apply
+    transition-all
+    duration-200;
+}
+
+.social-links a:hover {
+  transform: translateY(-1px);
 }
 
 /* Hamburger menu styles */
 #menu-toggle {
   @apply
-    block
-    text-gray-100
-    cursor-pointer;
+    fixed
+    top-4
+    left-4
+    px-4
+    py-3
+    rounded-lg 
+    bg-light-blue 
+    border-2 
+    border-primary-blue 
+    text-primary-blue 
+    hover:text-dark-blue 
+    transition-all 
+    duration-300 
+    shadow-lg
+    text-xl
+    cursor-pointer
+    z-50;
   display: none;
 }
 
+/* Mobile Sidebar Styles */
+.mobile-sidebar {
+  @apply 
+    fixed top-0 left-0 
+    h-full w-80 
+    bg-light-blue 
+    border-r border-medium-blue
+    transform -translate-x-full
+    transition-transform duration-300 ease-in-out
+    z-50
+    lg:hidden;
+}
+
+.mobile-sidebar.open {
+  @apply translate-x-0;
+}
+
+.mobile-sidebar-content {
+  @apply p-6 pt-16;
+}
+
+.mobile-nav-links {
+  @apply space-y-4 mb-8;
+}
+
+.mobile-nav-links a {
+  @apply 
+    block text-lg 
+    text-blue-gray hover:text-primary-blue 
+    ui-text 
+    py-2 px-3 
+    rounded-lg 
+    hover:bg-primary-blue hover:bg-opacity-10
+    transition-all duration-200;
+}
+
+.mobile-social-links {
+  @apply flex justify-center space-x-4 pt-4 border-t border-medium-blue;
+}
+
+.mobile-sidebar-overlay {
+  @apply 
+    fixed inset-0 
+    bg-black bg-opacity-50 
+    z-40
+    lg:hidden;
+}
+
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   nav {
-    @apply flex-col items-start gap-4;
+    @apply justify-center items-center;
   }
 
   #menu-toggle {
     display: block;
-  }
-
-  nav a {
-    @apply block;
-  }
-
-  nav a:not(:first-child) {
-    @apply mt-2;
-  }
-
-  nav {
-    @apply border-0;
-  }
-
-  nav.active {
-    @apply border-b-2 border-gray-100;
-  }
-
-  .menu-links {
-    @apply hidden md:flex flex-col items-start gap-4;
-  }
-  
-  .menu-links.open {
-    @apply flex;
   }
 }
 
@@ -187,10 +392,12 @@ form button {
     relative 
     overflow-hidden
     text-justify
-    max-w-5xl;
+    max-w-5xl
+    bg-light-blue
+    transition-colors
+    duration-300;
 
   margin-left: auto;
-  background-color: #ffffff;
   margin-right: auto;
   height: 100%;
 }
@@ -267,9 +474,10 @@ form button {
     shadow-lg 
     rounded-lg 
     overflow-hidden 
-    mb-8;
-
-  background-color: #ffffff;
+    mb-8
+    bg-light-blue
+    transition-colors
+    duration-300;
 }
 
 .job-info {
@@ -305,7 +513,23 @@ form button {
 
 @media screen and (max-width: 768px) {
   .job-card{
-    padding: auto;
+    @apply mx-4 max-w-none;
+  }
+  
+  .proj-card {
+    @apply mx-4 max-w-none;
+  }
+  
+  .job-card-date {
+    @apply text-xs px-2 py-1;
+  }
+  
+  .job-card .text-xl {
+    @apply text-lg;
+  }
+  
+  .proj-card .text-xl {
+    @apply text-lg;
   }
 }
 
@@ -313,9 +537,9 @@ form button {
   @apply
     text-right
     border
-    border-black 
-    bg-amber-100 
-    text-slate-950 
+    border-primary-blue 
+    bg-light-blue 
+    text-primary-blue 
     mt-2 
     px-4 
     text-sm 
@@ -336,10 +560,12 @@ form button {
     relative 
     overflow-hidden
     text-justify
-    max-w-5xl;
+    max-w-5xl
+    bg-light-blue
+    transition-colors
+    duration-300;
 
   margin-left: auto;
-  background-color: #ffffff;
   margin-right: auto;
   height: 100%;
 }
@@ -374,11 +600,11 @@ form button {
 }
 
 .proj-tech-stack-item {
-  /* background-color: #f7ffc7; */
   @apply
-    bg-amber-100;
-  color: #343a40;
-  border: #1f3031 solid 1px;
+    bg-light-blue
+    text-primary-blue
+    border-primary-blue;
+  border: 1px solid;
   border-radius: 4px;
   padding: 0.25rem 0.5rem;
   margin-right: 0.5rem;
@@ -387,9 +613,58 @@ form button {
 
 /* skills css */
 .card-con {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Professional Skills Modal Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.4s ease-out;
+}
+
+.skill-category {
+  position: relative;
+}
+
+.skill-category:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #93c5fd, transparent);
+  opacity: 0.3;
 }
 
 
@@ -402,6 +677,8 @@ form button {
 /* Media query for small screens */
 @media screen and (max-width: 600px) {
   .card-con {
-    flex-direction: column; /* Cards will stack vertically on small screens */
+    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-rows: auto;
+    padding: 1rem;
   }
 }
