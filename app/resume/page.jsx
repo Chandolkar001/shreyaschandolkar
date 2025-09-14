@@ -188,7 +188,7 @@ export default function ResumePage() {
                     PDF Viewer Unavailable
                   </h3>
                   <p className="text-blue-gray body-text mb-4">
-                    Your browser doesn't support inline PDF viewing or the file couldn't be loaded.
+                    Your browser doesn&apos;t support inline PDF viewing or the file couldn&apos;t be loaded.
                     Download the resume to view it in your default PDF reader.
                   </p>
                 </div>
