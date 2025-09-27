@@ -8,7 +8,7 @@ export default function ResumePage() {
   const [pdfError, setPdfError] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
-  const resumeUrl = '/resume.pdf';
+  const resumeUrl = '/shreyaschandolkar/resume.pdf';
 
   // Ensure component is mounted before rendering dynamic content
   useEffect(() => {
