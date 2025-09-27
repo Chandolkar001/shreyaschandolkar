@@ -7,7 +7,7 @@ const Home = () => {
     <main className="flex flex-col items-center justify-center">
       <div className="rounded-full overflow-hidden w-48 h-48 md:w-64 md:h-64">
         <Image
-          src="/shreyas.jpg"
+          src="/shreyaschandolkar/shreyas.jpg"
           alt="Shreyas"
           width={250}
           height={250}
