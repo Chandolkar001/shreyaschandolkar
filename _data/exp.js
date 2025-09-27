@@ -1,5 +1,23 @@
 const exp = [
     {
+        name: 'FlytBase Labs Pvt Ltd',
+        years: 'Feb 2024 - Present',
+        position: 'Robotics Engineer',
+        type: 'Full-Time',
+        place: 'Pune, Maharashtra',
+        href: 'https://flytbase.com/',
+        desc: [
+            "Re-architected flight operations from a monolithic system to microservices, scaling DJI device support from 50 to 500 concurrent devices.",
+            "Deployed a state management service using RMQ, MQTT, and a leader-follower pattern, reducing flight operations downtime from 50% to zero.",
+            "Optimized drone manual control latency, reducing it from 1000ms to 20ms by deploying regional MQTT brokers, achieving a 50x performance improvement.",
+            "Integrated third-party payloads support (e.g., speakers, searchlights, alarms, parachutes) using an adapter design pattern, enabling scalability for future enhancements.",
+            "Led proof of concept and testing for 4G dongle integration to resolve RF interference in DJI docks, while developing 4G Mobile SDK support within the Flytbase APK for enhanced connectivity.",
+            "Built a YOLOv8-based object detection pipeline with Agora IoT SDK, achieving 88% accuracy and 100ms latency for real-time performance.",
+            "Led end-to-end testing and deployment of DJI Docking Station 3 support on FlytBase platform, collaborating with channel partners to ensure successful integration.",
+            "Contributed to a 24/7 incident response team, successfully mitigating critical flight operation disruptions, restoring customer trust, and stabilizing services within a month."
+        ]
+    },
+    {
         name: 'Cloudanix Labs Pvt Ltd',
         years: 'Dec 2023 - Feb 2024',
         position: 'Software Engineer Intern',
@@ -7,7 +25,7 @@ const exp = [
         place: 'Sunnyvale, CA, USA (Remote)',
         href: 'https://www.cloudanix.com/',
         desc: [
-            "Developed GitHub, Bitbucket, and GitLab plugins for code secret and code vulnerability scanning.",
+            "Implemented GitHub, Bitbucket, and GitLab plugins for code secret and code vulnerability scanning.",
             "Developed automated workflows for Google Cloud Build service."
         ]
     },
@@ -70,13 +88,15 @@ const exp = [
     },
     {
         name: 'Pune Institute of Computer Technology, Pune',
-        years: 'Aug 2020 - Aug 2024',
-        position: 'Engineering',
-        type: 'Undergraduate',
-        place: 'Pune, IN',
+        years: 'Aug 2020 - May 2024',
+        position: 'Bachelor of Engineering (B.E.)',
+        type: 'Education',
+        place: 'Pune, Maharashtra',
         href: '#',
         desc: [
-            'Final Year Electronics and Telecommunications Engineering Student - CGPA 9.15 (current).',
+            'Electronics and Telecommunication Engineering - CGPA 9.1/10.',
+            'Winner of Smart India Hackathon 2023, demonstrating innovative problem-solving abilities.',
+            'Achieved All India Rank 6 in DD Robocon 2022 and Rank 15 in DD Robocon 2023.'
         ]
     },
 ];

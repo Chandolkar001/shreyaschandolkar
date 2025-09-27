@@ -3,6 +3,7 @@
   import Navbar from './components/Navbar'
   import ParticleBackground from './components/background_comp'
 import Footer from './components/Footer'
+import ThemeToggle from './components/ThemeToggle'
 
   export const metadata = {
     title: 'Shreyas Chandolkar',
@@ -12,7 +13,8 @@ import Footer from './components/Footer'
   export default function RootLayout({ children }) {
     return (
       <html lang="en">
-        <body className='main-div text-cyberpunk-pink bg-cyberpunk-bg border-cyberpunk-border flex flex-col min-h-screen'>
+        <body className='main-div flex flex-col min-h-screen'>
+        <ThemeToggle/>
         <Navbar/>
         {children}
         <Footer/>

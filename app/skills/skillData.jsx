@@ -6,14 +6,14 @@ export default function SkillDat({title, items}) {
     <div className="professional-card">
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title flex justify-right space-x-4">
+          <h5 className="card-title flex justify-right space-x-4 heading-tertiary">
           <div className='arrow'><BsArrowRightCircleFill/></div>
-            <b>{title}</b>
+            {title}
           </h5>
           <div className="flex justify-center">
           <ul className="list">
           {items.map((item, index) => (
-              <li className="list-group-item" key={index}>
+              <li className="list-group-item body-text" key={index}>
                 {item.name}
               </li>
             ))}
