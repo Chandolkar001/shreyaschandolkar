@@ -1,7 +1,7 @@
 const about = {
     name: 'Shreyas Chandolkar',
     title: 'Robotics Engineer',
-    profileImage: '/shreyas.jpg',
+    profileImage: '/shreyaschandolkar/shreyas.jpg',
     location: 'Pune, Maharashtra',
     typeAnimation: [
         "Robotics Engineer",
